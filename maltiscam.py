@@ -18,5 +18,5 @@ camera_0 = cv2.VideoCapture(cam)
 
 time.sleep(2)
 s0, img = camera_0.read()
-img = increase_brightness(img)
+img = increase_brightness(img,value=20)
 cv2.imwrite('maltis.png', img)
