@@ -2,7 +2,7 @@ import cv2
 import time
 from git import Repo
 
-PATH_OF_GIT_REPO = r'.'  # make sure .git folder is properly configured
+PATH_OF_GIT_REPO = r'/home/pi/Documents/maltis/maltiscam/'  # make sure .git folder is properly configured
 COMMIT_MESSAGE = 'maltis'
 
 def git_push():
@@ -12,7 +12,8 @@ def git_push():
         repo.index.commit(COMMIT_MESSAGE)
         origin = repo.remote(name='origin')
         origin.push()
-    except:
+    except Exception as err:
+	print(err)
         print('Some error occured while pushing the code')
 
 cam = 0
