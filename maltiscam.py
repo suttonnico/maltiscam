@@ -15,7 +15,7 @@ def git_push():
     except:
         print('Some error occured while pushing the code')
 
-cam = 0
+cam = 4
 camera_0 = cv2.VideoCapture(cam)
 
 while True:
