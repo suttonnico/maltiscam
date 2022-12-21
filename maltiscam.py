@@ -15,11 +15,11 @@ def git_push():
     except:
         print('Some error occured while pushing the code')
 
-cam = 0
+cam = 2
 camera_0 = cv2.VideoCapture(cam)
 
-while True:
-    s0, img = camera_0.read()
-    cv2.imwrite('maltis.png', img)
-    git_push()
-    time.sleep(15*60)
+
+s0, img = camera_0.read()
+cv2.imwrite('maltis.png', img)
+git_push()
+time.sleep(15*60)
