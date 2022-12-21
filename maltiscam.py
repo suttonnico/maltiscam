@@ -17,9 +17,10 @@ def git_push():
 
 cam = 0
 camera_0 = cv2.VideoCapture(cam)
-
+print("START")
 time.sleep(1)
 s0, img = camera_0.read()
 cv2.imwrite('maltis.png', img)
+print("PUSHING")
 git_push()
 
