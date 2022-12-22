@@ -2,3 +2,4 @@
 spawn /home/pi/Documents/maltis/maltiscam/maltiscam.sh
 expect "Enter passphrase for key:\r"
 send -- "malta\r"
+expect eof
