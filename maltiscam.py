@@ -16,12 +16,20 @@ def git_push():
 	print(err)
         print('Some error occured while pushing the code')
 
-cam = 0
-camera_0 = cv2.VideoCapture(cam)
+
+camera_0 = cv2.VideoCapture(0)
+camera_2 = cv2.VideoCapture(2)
 print("START")
 time.sleep(1)
 s0, img = camera_0.read()
 cv2.imwrite('/home/pi/Documents/maltis/maltiscam/maltis.png', img)
+
+cam = 2
+camera_0 = cv2.VideoCapture(cam)
+print("START")
+time.sleep(1)
+s0, img = camera_2.read()
+cv2.imwrite('/home/pi/Documents/maltis/maltiscam/maltis_balcon.png', img)
 print("PUSHING")
 git_push()
 
