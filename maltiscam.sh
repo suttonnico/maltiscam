@@ -1,4 +1,4 @@
 eval "$(ssh-agent -s)"
-ssh-add key
+printf "malta\n" | ssh-add key
 ssh -vT git@github.com
 python maltiscam.py
