@@ -19,17 +19,24 @@ def git_push():
 
 camera_0 = cv2.VideoCapture(0)
 camera_2 = cv2.VideoCapture(2)
+camera_4 = cv2.VideoCapture(4)
 print("START")
 time.sleep(1)
 s0, img = camera_0.read()
 cv2.imwrite('/home/pi/Documents/maltis/maltiscam/maltis.png', img)
 
 cam = 2
-camera_0 = cv2.VideoCapture(cam)
 print("START")
 time.sleep(1)
 s0, img = camera_2.read()
 cv2.imwrite('/home/pi/Documents/maltis/maltiscam/maltis_balcon.png', img)
 print("PUSHING")
+print("START")
+time.sleep(1)
+s0, img = camera_4.read()
+cv2.imwrite('/home/pi/Documents/maltis/maltiscam/maltis_living.png', img)
+print("PUSHING")
+git_push()
+
 git_push()
 
